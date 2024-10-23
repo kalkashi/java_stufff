@@ -1,17 +1,33 @@
 package org.lbg.c4;
 
-import org.lbg.unreachable.ClassB;
+//import org.lbg.unreachable.ClassB;
+
+import java.io.IOException;
 
 /**
  * Hello world!
  */
 public class App {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+        
 
-        System.out.println("Hello World!");
-        int x = 908;
-        System.out.println("Hellooooo !" + x);
-        ClassA ca = new ClassA();
-        ClassB cb = new ClassB();
+    int counter = 0;
+
+        try {
+            while (true){
+                int ch=System.in.read();
+                if(ch==-1){
+                    break;
+                }
+                System.out.println((char)ch);
+                counter++;
+            }
+
+            System.out.println("Num of charss: " + counter);
+        } catch (IOException e) {
+            System.out.println(e);
+        }
+
+
     }
 }
