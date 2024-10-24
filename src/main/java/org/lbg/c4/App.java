@@ -16,10 +16,11 @@ public class App {
         try {
             while (true){
                 int ch=System.in.read();
+                ch = (char)ch;
                 if(ch==-1){
                     break;
                 }
-                System.out.println((char)ch);
+                System.out.println("Char entered " + Integer.toHexString(ch));
                 counter++;
             }
 
