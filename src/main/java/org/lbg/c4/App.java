@@ -3,6 +3,8 @@ package org.lbg.c4;
 //import org.lbg.unreachable.ClassB;
 
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.LineNumberReader;
 
 /**
  * Hello world!
@@ -13,18 +15,13 @@ public class App {
 
     int counter = 0;
 
-        try {
-            while (true){
-                int ch=System.in.read();
-                ch = (char)ch;
-                if(ch==-1){
-                    break;
-                }
-                System.out.println("Char entered " + Integer.toHexString(ch));
-                counter++;
-            }
+    InputStreamReader isr = new InputStreamReader(System.in);
+    LineNumberReader lnr = new LineNumberReader(isr);
 
-            System.out.println("Num of charss: " + counter);
+        try {
+            while (lnr.readLine() != null)
+                ;
+            System.out.println("Num of lines: " + lnr.getLineNumber());
         } catch (IOException e) {
             System.out.println(e);
         }
