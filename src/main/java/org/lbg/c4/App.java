@@ -26,13 +26,23 @@ public class App {
 //        }
 
         System.out.println("ADD RESULT   " + sum((int)4.3,5));
-
+        int y=44;
+        MyInteger mi = new MyInteger();
+        fooBar(mi);
+        System.out.println("FOOBAR VAL: " + mi.data);
+        mi=null;
 
     }
 
 
-    public static int sum(int x,int y){
+    public static double sum(int x,int y){
         return x+y;
     }
+
+    public static void fooBar(MyInteger x){
+        (x.data)++;
+    }
+
+
 }
 
